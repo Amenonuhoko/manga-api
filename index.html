@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Manga API</title>
+		<!-- <link rel="stylesheet"  href="css/styles.css" /> -->
+	</head>
+
+	<body>
+		<header></header>
+
+		<main>
+			<div class="container">
+				<h1>Search</h1>
+				<form id="manga-form">
+					<label
+						>Manga
+						<select name="search-param">
+							<option value="id">id</option>
+							<option value="title">title</option>
+							<option value="slug">slug</option>
+						</select>
+						<input type="text" name="input" />
+						<input type="submit" name="submit" value="Submit" />
+					</label>
+				</form>
+			</div>
+			<div id="content">
+				<img id="image" />
+				<h1 id="header"></h1>
+				<p id="synopsis"></p>
+			</div>
+		</main>
+
+		<footer></footer>
+		<script src="scripts/index.js"></script>
+	</body>
+</html>
