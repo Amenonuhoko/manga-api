@@ -1,0 +1,28 @@
+main {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	border: 3px solid;
+}
+.search-form {
+	display: flex;
+	width: 100%;
+	flex-direction: column;
+	margin-left: 30px;
+}
+.content {
+	display: flex;
+	margin-top: 20px;
+	width: 600px;
+}
+.detail {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+}
+#manga-form {
+	display: flex;
+}
+#image {
+	margin: 5px;
+}

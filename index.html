@@ -3,21 +3,21 @@
 <html>
 	<head>
 		<title>Manga API</title>
-		<!-- <link rel="stylesheet"  href="css/styles.css" /> -->
+		<link rel="stylesheet" href="/css/style.css" />
 	</head>
 
 	<body>
 		<header></header>
 
 		<main>
-			<div class="container">
+			<div class="search-form">
 				<h1>Search</h1>
 				<form id="manga-form">
 					<label
 						>Manga
 						<select name="search-param">
 							<option value="id">id</option>
-							<option value="title">title</option>
+							<option value="title.en">title</option>
 							<option value="slug">slug</option>
 						</select>
 						<input type="text" name="input" />
@@ -25,10 +25,12 @@
 					</label>
 				</form>
 			</div>
-			<div id="content">
+			<div class="content">
 				<img id="image" />
-				<h1 id="header"></h1>
-				<p id="synopsis"></p>
+				<div class="detail">
+					<h1 id="header"></h1>
+					<p id="synopsis"></p>
+				</div>
 			</div>
 		</main>
 

@@ -33,7 +33,7 @@ const getManga = async () => {
 const renderObj = async () => {
 	const obj = await getManga();
 	console.log(obj);
-	image.src = obj.data["0"].attributes.posterImage.medium;
+	image.src = obj.data["0"].attributes.posterImage.small;
 	header.innerHTML = obj.data["0"].attributes.titles.en;
 	synopsis.innerHTML = obj.data["0"].attributes.synopsis;
 };
