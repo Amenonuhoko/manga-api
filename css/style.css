@@ -9,6 +9,7 @@ main {
 	width: 100%;
 	flex-direction: column;
 	margin-left: 30px;
+	text-align: center;
 }
 .content {
 	display: flex;
