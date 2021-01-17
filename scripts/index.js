@@ -2,9 +2,18 @@
 // const header = document.getElementById("header");
 // const synopsis = document.getElementById("synopsis");
 const container = document.querySelector(".page-container");
-
+const showHide = (bool) => {
+	const loading = document.getElementById("loading");
+	if (bool) {
+		loading.style.display = "inline";
+	} else {
+		loading.style.display = "none";
+	}
+};
 // バカやろ
 const getManga = async () => {
+	// Loading
+	showHide(true);
 	// Subject to other type
 	const url = "https://kitsu.io/api/edge";
 	//For this type
@@ -37,6 +46,7 @@ const createDocument = async () => {
 	// Obj
 	const objArr = await getManga();
 	console.log(objArr);
+	showHide(false);
 	// Iterate
 	objArr.data.forEach((arr, index) => {
 		// Template
