@@ -1,0 +1,17 @@
+.page-container {
+	display: flex;
+	flex-direction: column;
+	margin-top: 20px;
+	width: 600px;
+}
+.manga-cards {
+	display: flex;
+}
+.image {
+	margin: 5px;
+}
+.detail {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+}
