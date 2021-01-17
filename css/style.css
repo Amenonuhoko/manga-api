@@ -1,0 +1,16 @@
+/* @import url("reset.css"); */
+@import url("components/mangaCards.css");
+@import url("components/searchForm.css");
+
+main {
+	display: flex;
+	flex-direction: column;
+	border: 3px solid;
+	border-radius: 5px;
+}
+h1 {
+	font-family: Arial, Helvetica;
+}
+p {
+	font-family: Georgia, "Times New Roman", Times;
+}
