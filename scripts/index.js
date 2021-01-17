@@ -44,21 +44,25 @@ const createDocument = async () => {
 		const newCanTitle = `<h1 class="header">${arr.attributes.canonicalTitle}</h1>`;
 		const newAltTitle = `<h6 class="header">${arr.attributes.titles.en_jp}</h1>`;
 		const newSyn = `<p class="synopsis">${arr.attributes.synopsis}</p>`;
-		const newRating = `<p class="rank">Rating <br> ${arr.attributes.ratingRank}</p>`;
-		const newChapCount = `<p class="chap">Ch <br>${arr.attributes.chapterCount}</p>`;
+		const newRating = `<p class="rank">Ranking <br> #${arr.attributes.ratingRank}</p>`;
+		const newChapCount = `<p class="chap">Chapter <br> ${arr.attributes.chapterCount}</p>`;
+		const newStatus = `<p class="chap">Status <br> ${arr.attributes.status}</p>`;
 		const newTemplate = `
 			<div class="manga-cards" id="manga-card-${index}">
 			${newImage}
 				<div class="detail">
 					<div class="info">
-					${newCanTitle}
-					${newAltTitle}
+						${newCanTitle}
+						${newAltTitle}
+					</div>
 					<div class="subInfo">
 						${newRating}
 						${newChapCount}
+						${newStatus}
 					</div>
+					<div class="synopsis">
+						${newSyn}
 					</div>
-					${newSyn}
 				</div>
 			</div>
 			`;

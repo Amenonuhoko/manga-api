@@ -13,18 +13,37 @@
 	margin: 20px;
 }
 .detail {
-	display: flex;
-	flex-direction: column;
+	/* Flex */
+	/* display: flex;
+	flex-direction: column; */
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: auto auto;
+	grid-template-areas:
+		"head head head"
+		"title title title"
+		"para para para";
 	text-align: center;
 	margin: 15px;
 	padding: 15px;
 	border-radius: 4px;
 }
 .info {
+	grid-area: title;
 	display: flex;
-
+	flex-direction: column;
+	justify-items: flex-start;
 	border-bottom: 1px inset black;
 }
+.info h1,
+h6 {
+	margin: 5px 0;
+}
 .subInfo {
-	margin: 20px;
+	grid-area: head;
+	display: flex;
+	justify-content: space-around;
+}
+.synopsis {
+	grid-area: para;
 }
