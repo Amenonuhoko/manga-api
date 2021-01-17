@@ -31,25 +31,33 @@ const getManga = async () => {
 		alert(error);
 	}
 };
-
+// MAKE LOADING FUNCTION
+//
 const createDocument = async () => {
 	// Obj
 	const objArr = await getManga();
+	console.log(objArr);
 	// Iterate
 	objArr.data.forEach((arr, index) => {
-		// Declare
-		const populateImage = arr.attributes.posterImage.small;
-		const populateTitle = arr.attributes.titles.en;
-		const populateSyn = arr.attributes.synopsis;
 		// Template
-		const newImage = `<img class="image" src=${populateImage}>`;
-		const newTitle = `<h1 class="header">${populateTitle}</h1>`;
-		const newSyn = `<p class="synopsis">${populateSyn}</p>`;
+		const newImage = `<img class="image" src=${arr.attributes.posterImage.small}>`;
+		const newCanTitle = `<h1 class="header">${arr.attributes.canonicalTitle}</h1>`;
+		const newAltTitle = `<h6 class="header">${arr.attributes.titles.en_jp}</h1>`;
+		const newSyn = `<p class="synopsis">${arr.attributes.synopsis}</p>`;
+		const newRating = `<p class="rank">Rating <br> ${arr.attributes.ratingRank}</p>`;
+		const newChapCount = `<p class="chap">Ch <br>${arr.attributes.chapterCount}</p>`;
 		const newTemplate = `
 			<div class="manga-cards" id="manga-card-${index}">
 			${newImage}
 				<div class="detail">
-					${newTitle}
+					<div class="info">
+					${newCanTitle}
+					${newAltTitle}
+					<div class="subInfo">
+						${newRating}
+						${newChapCount}
+					</div>
+					</div>
 					${newSyn}
 				</div>
 			</div>
